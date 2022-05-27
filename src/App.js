@@ -6,16 +6,27 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { Container } from "@mui/system";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Cars from "./pages/Cars";
+import List from "./pages/List";
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const menus = [
     { path: "/posts", component: <Posts /> },
     { path: "/posts/:id", component: <Detail /> },
+    { path: "/get", component: <Home /> },
+    { path: "/get/cars", component: <Cars /> },
+    { path: "/get/cars/list", component: <List /> },
   ];
   return (
     <div className="App">
+      <Navbar></Navbar>
       <Container style={{ marginTop: "25px", minHeight: "80vh" }}>
-        <GoogleOAuthProvider clientId="501582206439-ie655fk44mnfd81defk11trq0vopng64.apps.googleusercontent.com">
+        <GoogleOAuthProvider clientId="43111301323-ojipgm15gb7v9rmv1b5qf14vt68vipm1.apps.googleusercontent.com">
           <Routes>
             {menus.map((row, i) => (
               <Route

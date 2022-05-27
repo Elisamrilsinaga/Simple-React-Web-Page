@@ -1,5 +1,19 @@
 .App {
+  /* text-align: center; */
+  font-family: Helvetica;
+}
+
+.centerText{
   text-align: center;
+}
+
+.filter{
+  margin-top: -50px;
+  position: relative;
+}
+
+.filterButton{
+  width: 10px;
 }
 
 .App-logo {
